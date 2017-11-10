@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Andela Hack </title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link rel="stylesheet" type="text/css" href="libs/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/fonts/open-sans/styles.css">
+    <link rel="stylesheet" type="text/css" href="libs/tether/css/tether.min.css">
+    <link rel="stylesheet" type="text/css" href="libs/jscrollpane/jquery.jscrollpane.css">
+    <link rel="stylesheet" type="text/css" href="libs/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/styles/common.min.css">
+	
+	 <link rel="stylesheet" type="text/css" href="libs/sweetalert/sweetalert.css"> <!-- original -->
+    <link rel="stylesheet" type="text/css" href="assets/styles/libs/sweetalert/sweetalert.min.css"> <!-- customization -->
+    <!-- END GLOBAL MANDATORY STYLES -->
+
+    <!-- BEGIN THEME STYLES -->
+    <link rel="stylesheet" type="text/css" href="assets/styles/themes/primary.min.css">
+    <!-- END THEME STYLES -->
+
+<link rel="stylesheet" type="text/css" href="assets/styles/widgets/panels.min.css">
+<link rel="stylesheet" type="text/css" href="assets/scripts/charts/area/area.chart.min.css">
+<link rel="stylesheet" type="text/css" href="assets/scripts/charts/radial-progress/radial-progress.chart.min.css">
+
+
+<link rel="stylesheet" type="text/css" href="libs/jquery-confirm/jquery-confirm.min.css"> <!-- original -->
+<link rel="stylesheet" type="text/css" href="assets/styles/libs/jquery-confirm/jquery.confirm.min.css"> <!-- original -->
+
+
+<link rel="stylesheet" type="text/css" href="libs/izi-modal/css/iziModal.min.css"> <!-- Original -->
+<link rel="stylesheet" type="text/css" href="assets/styles/libs/izi-modal/izi-modal.min.css"> <!-- Original -->
+
+
+<link rel="stylesheet" type="text/css" href="libs/prism/prism.css"> <!-- original -->
+<link rel="stylesheet" type="text/css" href="assets/styles/libs/bootstrap-notify/bootstrap-notify.min.css"> <!-- customization -->
+
+</head>
+<!-- END HEAD -->
+
+<body class="ks-navbar-fixed ks-sidebar-default ks-sidebar-default ks-sidebar-position-fixed ks-page-header-fixed ks-theme-primary ks-page-loading"> <!-- remove ks-page-header-fixed to unfix header -->
+
+    <!-- BEGIN HEADER -->
+<nav class="navbar ks-navbar">
+    <!-- BEGIN HEADER INNER -->
+    <!-- BEGIN LOGO -->
+    <div href="#" class="navbar-brand">
+        <!-- BEGIN RESPONSIVE SIDEBAR TOGGLER -->
+        <a href="#" class="ks-sidebar-toggle"><i class="fa fa-bars" aria-hidden="true"></i></a>
+        <a href="#" class="ks-sidebar-mobile-toggle"><i class="fa fa-bars" aria-hidden="true"></i></a>
+        <!-- END RESPONSIVE SIDEBAR TOGGLER -->
+        <a href="index-2.html" class="ks-logo"> <!--title --></a>
+
+        <!-- BEGIN GRID NAVIGATION -->
+        <span class="nav-item dropdown ks-dropdown-grid">
+            <a class="nav-link " data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"></a>
+          
+        </span>
+        <!-- END GRID NAVIGATION -->
+    </div>
+    <!-- END LOGO -->
+
+    <!-- BEGIN MENUS -->
+    <div class="ks-wrapper">
+        <nav class="nav navbar-nav">
+       
+        </nav>
+		
+		  <!-- BEGIN NAVBAR USER -->
+                <div class="nav-item dropdown ks-user">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                       
+                        <span class="ks-info">
+                            <span class="ks-name"><?php  echo $_SESSION['lname']." ".$_SESSION['fname']; ?></span>
+                            <span class="ks-description">Member</span>
+                        </span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="Preview">
+                        <a class="dropdown-item" href="#">
+                            <span class="fa fa-user-circle-o ks-icon"></span>
+                            <span>Profile</span>
+                        </a>
+                       
+                        <a class="dropdown-item" href="logout.php">
+                            <span class="fa fa-sign-out ks-icon" aria-hidden="true"></span>
+                            <span>Logout</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- END NAVBAR USER -->
+				
+
+        <!-- BEGIN NAVBAR ACTIONS TOGGLER -->
+        <nav class="nav navbar-nav ks-navbar-actions-toggle">
+            <a class="nav-item nav-link" href="#">
+                <span class="fa fa-ellipsis-h ks-icon ks-open"></span>
+                <span class="fa fa-close ks-icon ks-close"></span>
+            </a>
+        </nav>
+        <!-- END NAVBAR ACTIONS TOGGLER -->
+
+        <!-- BEGIN NAVBAR MENU TOGGLER -->
+        <nav class="nav navbar-nav ks-navbar-menu-toggle">
+            <a class="nav-item nav-link" href="#">
+                <span class="fa fa-th ks-icon ks-open"></span>
+                <span class="fa fa-close ks-icon ks-close"></span>
+            </a>
+        </nav>
+        <!-- END NAVBAR MENU TOGGLER -->
+    </div>
+    <!-- END MENUS -->
+    <!-- END HEADER INNER -->
+</nav>
+<!-- END HEADER -->
+
+
+
+
+
+
+<div class="ks-container">
+    
+    <!-- BEGIN DEFAULT SIDEBAR -->
+<div class="ks-column ks-sidebar ks-info">
+    <div class="ks-wrapper">
+      <ul class="nav nav-pills nav-stacked">
+            <li class="nav-item ks-user dropdown">
+                <a class="nav-link dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                
+                    <div class="ks-info">
+              
+                        <div class="ks-text">Member</div>
+                    </div>
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="std_list.html">Profile</a>
+                   
+                </div>
+            </li>
+       
+            
+           <li class="nav-item">
+                <a class="nav-link" href="index.html">
+                    <span class="ks-icon fa fa-plus"></span>
+                    <span>Add Student</span>
+                </a>
+            </li>
+
+			<li class="nav-item">
+                <a class="nav-link" href="std_list.html">
+                    <span class="ks-icon fa fa-users"></span>
+                    <span>View Student</span>
+                </a>
+            </li> 
+			
+			
+        </ul>
+    </div>
+</div>
+<!-- END DEFAULT SIDEBAR -->
+
+
+
+
+
+    <div class="ks-column ks-page">
+       
+<!-- END DASHBOARD HEADER -->
+
+<!-- BEGIN DASHBOARD CONTENT -->
+<div class="ks-content">
+    <div class="ks-body">
+        <div class="container-fluid ks-rows-section">
+            <div class="row ks-widgets-collection">
+			<div class="col-md-3"></div>
+                <div class="col-md-6">
+                   <div class="card panel panel-default header-gray">
+                                <h5 class="card-header">
+                                   Add A New Student
+                                </h5>
+                                <div class="card-block">
+                                    
+									
+						<form class="form-horizontal" id="form_data" method="post"  action="/createRecord" enctype="multipart/form-data" encoding="multipart/form-data">
+						
+        <div class="form-group has-error">
+          <label for="inputEmail3" class="col-sm-2">Full name * </label>
+          <div class="col-sm-12">
+            <input type="text" name="fname" class="form-control fname" required placeholder="Full name">
+            <input type="hidden" name="std_id" class="form-control std_id">
+          </div>
+        </div>
+		<br/>
+        <div class="form-group has-error" ng-class="{'has-error': addAdmin.username.$invalid}">
+          <label for="inputEmail3" class="col-sm-2 control-label ng-binding">Username * </label>
+          <div class="col-sm-12">
+            <input type="text" name="username" ng-model="form.username" class="form-control ng-pristine ng-invalid ng-invalid-required username" required="" placeholder="Username">
+          </div>
+        </div>
+		<br/>
+        <div class="form-group has-error" ng-class="{'has-error': addAdmin.email.$invalid}">
+          <label for="inputPassword3" class="col-sm-2 control-label ng-binding">Email address *</label>
+          <div class="col-sm-12">
+            <input type="email" name="email" ng-model="form.email" class="form-control ng-dirty ng-valid-required ng-invalid ng-invalid-email email" placeholder="Email address" ng-required="$root.dashboardData.emailIsMandatory == '1'" required="required">
+          </div>
+        </div>
+		<br/>
+        <div class="form-group">
+		<br/>
+		 <label for="inputPassword3" class="col-sm-2 control-label ng-binding">Gender *</label>
+         <div class="row">
+		 
+                                <div class="col-sm-3">
+                                           <div class="radio">
+												<label>
+													Male: <input type="radio" name="gender" value="male"><i class="helper"></i>
+												</label>
+											</div>
+                                </div>
+                                <div class="col-sm-3">
+                                           <div class="radio">
+												<label>
+													Female: <input type="radio" name="gender" value="female"><i class="helper"></i>
+												</label>
+											</div>
+                                  
+                                    </div>
+                            </div>
+        </div>
+		<br/>
+        <div class="form-group">
+          <label for="inputPassword3" class="col-sm-2 control-label ng-binding">Birthday</label>
+          <div class="col-sm-12">
+            <input type="date" id="datemask" name="birthday" ng-model="form.birthday" class="form-control datemask ng-pristine ng-valid birthday">
+          </div>
+        </div>
+		<br/>
+        <div class="form-group">
+          <label for="inputPassword3" class="col-sm-2 control-label ng-binding">Address</label>
+          <div class="col-sm-12">
+            <input type="text" name="address" class="form-control ng-pristine ng-valid address" ng-model="form.address" placeholder="Address">
+          </div>
+        </div>
+		<br/>
+        <div class="form-group">
+          <label for="inputPassword3" class="col-sm-2 control-label ng-binding">Phone No</label>
+          <div class="col-sm-12">
+            <input type="text" name="phone" class="form-control ng-pristine ng-valid phone" ng-model="form.phoneNo" placeholder="Phone No" international-phone-number="">
+          </div>
+        </div>
+       <br/>
+        <div class="form-group has-error" ng-class="{'has-error': addAdmin.studentClass.$invalid}">
+          <label for="inputPassword3" class="col-sm-2 control-label ng-binding">Class</label>
+          <div class="col-sm-12">
+            <select class="form-control ng-pristine ng-invalid ng-invalid-required class" name="class" required>
+			<option value="">Select Class</option>
+			<option value="JSS1">JSS1</option>
+			<option value="JSS2">JSS2</option>
+			<option value="JSS3">JSS3</option>
+           
+            </select>
+          </div>
+        </div>
+		<br/>
+        <div class="form-group">
+           <div class="col-sm-12">
+		   						
+						
+<div id="ks-izi-modal-large"
+     class="ks-izi-modal">
+    <p>
+	<center>Processing your request! Please wait</center>
+	
+	<center> <img class="loader" src="assets/img/loader.gif" /></center>
+	
+	<div class="res"></div>
+	</p>
+</div>
+
+           <input type="hidden" name="create_student"/>
+							<button type="submit" class="btn btn-block btn-primary waves-effect waves-light m-r-10" data-toggle="tooltip" id="reg" data-placement="top" title="" data-original-title="Submit To Save">Submit  <center><img style="display:none;" width="30" id="ring1" src="../assets/images/ring.gif" /></center>	 </button>
+          </div>
+        </div>
+      </form>
+									
+									
+					
+                                </div>
+                            </div>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+       
+			
+        </div>
+    </div>
+</div>
+<!-- END DASHBOARD CONTENT -->
+    </div>
+</div>
+
+
+<!-- BEGIN PAGE LEVEL PLUGINS -->
+<script src="libs/jquery/jquery.min.js"></script>
+<script src="libs/responsejs/response.min.js"></script>
+<script src="libs/loading-overlay/loadingoverlay.min.js"></script>
+<script src="libs/tether/js/tether.min.js"></script>
+<script src="libs/bootstrap/js/bootstrap.min.js"></script>
+<script src="libs/jscrollpane/jquery.jscrollpane.min.js"></script>
+<script src="libs/jscrollpane/jquery.mousewheel.js"></script>
+<script src="libs/flexibility/flexibility.js"></script>
+<!-- END PAGE LEVEL PLUGINS -->
+<script src="libs/sweetalert/sweetalert.min.js"></script>
+
+<!-- BEGIN THEME LAYOUT SCRIPTS -->
+<script src="assets/scripts/common.min.js"></script>
+<!-- END THEME LAYOUT SCRIPTS -->
+
+<!-- BEGIN DASHBOARD SCRIPTS -->
+<script src="libs/d3/d3.min.js"></script>
+<script src="libs/count-up/count-up.min.js"></script>
+<script src="assets/scripts/charts/area/area.chart.min.js"></script>
+<script src="assets/scripts/charts/radial-progress/radial-progress.chart.min.js"></script>
+<script src="assets/scripts/charts/bar/inline-bar.chart.min.js"></script>
+<script type="text/javascript" src="../../../../../www.gstatic.com/charts/loader.js"></script>
+
+
+<script src="libs/jquery-confirm/jquery-confirm.min.js"></script>
+
+<!-- BEGIN THEME LAYOUT SCRIPTS -->
+<script src="assets/scripts/common.min.js"></script>
+<!-- END THEME LAYOUT SCRIPTS -->
+
+<script src="libs/izi-modal/js/iziModal.min.js"></script>
+
+
+<script src="libs/bootstrap-notify/bootstrap-notify.min.js"></script>
+<script src="libs/prism/prism.js"></script>
+<div class="ks-mobile-overlay"></div>
+
+</body>
+
+<script>
+	function Notify(title,message,type){
+			$.notify({
+	title:title,
+	message:message
+},{
+	type:type
+});
+		}
+</script>
+
+</html>
+
+
+
+<script src="libs/jquery-confirm/jquery-confirm.min.js"></script>
+
+<script type="text/javascript">
+
+						jQuery("#form_data").submit(function(e){
+						//Dialog()
+						form_data=$(this).serialize();
+						 $('#reg').attr('disabled',true);
+						 $('#ks-izi-modal-large').show();
+						console.log(form_data);
+								e.preventDefault();
+								$.ajax({
+									type:"PUT",
+									url:"/update",
+									data:form_data,
+									success: function(response){
+										console.log(response);
+										 $('#ks-izi-modal-large').hide();
+										if(response.status=="200"){
+									
+											Notify("Success",response.message,"success");
+									
+									var delay = 5000;
+										setTimeout((function(){ window.location.reload()}), delay);  
+									}else
+									{
+								 $('#reg').attr('disabled',false);
+										Notify("Failed","An error occured while processing your request","danger-active");
+									
+											$('#ks-izi-modal-large').hide();
+									}
+									}
+								});
+									 $('#reg').attr('disabled',false);
+							});
+						
+						function autoFillInputs(){
+		
+										std_id=localStorage.getItem('std_id');
+								$.ajax({
+									type:"GET",
+									url:"/getById?std_id="+std_id,
+									success: function(response){
+										console.log(response);
+										if(response.status=="200"){
+										//alert(response.data[0].fname)
+									$('.std_id').val(response.data[0].std_id)
+									$('.fname').val(response.data[0].fname)
+									$('.username').val(response.data[0].username)
+									$('.birthday').val(response.data[0].bday)
+									$('.address').val(response.data[0].add)
+									$('.phone').val(response.data[0].phone)
+									$('.email').val(response.data[0].email)
+									$('.class').val(response.data[0].class)
+										
+									}else
+									{
+								
+										Notify("Failed","An error occured while processing your request","danger-active");
+									
+											$('#ks-izi-modal-large').hide();
+									}
+									}
+								});
+									}
+						
+		
+		
+	$(document).ready(function () {
+		std_id=localStorage.getItem('std_id');
+		autoFillInputs();
+        $('#ks-izi-modal-large').hide();
+    })
+
+		
+						</script>
